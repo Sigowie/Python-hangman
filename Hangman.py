@@ -1,16 +1,22 @@
 import time #Import time module
+import random #import random module
 
-name = raw_input("What is your name?") #setter navn"
+name = raw_input("What is your name?") #setter navn
 
 print "Hello, " + name, "Time to play some hangman!"
 
-time.sleep(1) #Vent et sekund#
+time.sleep(1) #Vent et sekund
 
 print "Start guessing..."
 
 time.sleep(0.5)
 
-word = "secret" #Sett ord
+lines = open("words.txt").readlines() #åpner txt dokument
+line = lines[0] #settning fra txt doukument
+
+words = line.split() #spliter inn i liste baser på åpenrom
+
+word = random.choice(words) #Sett ord
 
 guesses = '' #Setter tom variabel
 
