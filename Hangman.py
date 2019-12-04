@@ -1,7 +1,7 @@
 import time #Import time module
 import random #import random module
 
-name = raw_input("What is your name?") #setter navn
+name = raw_input("What is your name? ") #setter navn
 
 print "Hello, " + name, "Time to play some hangman!"
 
@@ -54,7 +54,9 @@ while turns > 0:#sett while loop
 
         if turns == 0:
 
+            print "The correct answer was " + word
             print "you lose"
+    
     
 
 
