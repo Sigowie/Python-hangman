@@ -1,6 +1,6 @@
 import time #Import time module
 
-name = input("What is your name?") #setter navn"
+name = raw_input("What is your name?") #setter navn"
 
 print "Hello, " + name, "Time to play some hangman!"
 
@@ -16,12 +16,12 @@ guesses = '' #Setter tom variabel
 
 turns = 10
 
-while turns > 0: 
+while turns > 0:#sett while loop
     failed = 0
 
-    for char in word:
-
-        if char in guesses:
+    for char in word: #for loop for alle karakterer i ord
+        
+        if char in guesses: #ser om karakteren er i spillers gjetting
 
             print char,
 
@@ -31,15 +31,14 @@ while turns > 0:
 
             failed +=1
 
-        if failed == 0:
-            print "You won"
+    if failed == 0:
+        print "You won"
 
+        break
 
-            break
+    guess = raw_input ("guess a character:")
 
-    guess = input ("guess a character:")
-
-    guesses     += guess
+    guesses += guess
 
     if guess not in word:
 
